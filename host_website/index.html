@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id="cameraStream"></canvas>
+
+    <div class="servoController">
+      <p>Servo 1 angle</p>
+      <input type="range" min="0" max="180" value="0" id="servoOne">
+      <p>Servo 2 angle</p>
+      <input type="range" min="0" max="180" value="0" id="servoTwo">
+    </div>
+
+    <script>
+      const socket = new WebSocket("ws://localhost:8080", "echo_protocol");
+
+      socket.onopen = () => {
+        console.log("Connected to WebSocket!");
+        socket.send("ID_CONTROL");
+      };
+
+      socket.onmessage = (event) => {
+        console.log("Received:", event.data);
+      };
+
+      socket.onclose = () => console.log("Connection closed.");
+      socket.onerror = (err) => console.error("WebSocket error:", err);
+
+
+      document.getElementById("servoOne").addEventListener("input", (e) => {
+        socket.send(JSON.stringify({ target: "ESP" ,control: "SERVO1",value: e.target.value }));
+      });
+
+      document.getElementById("servoTwo").addEventListener("input", (e) => {
+        socket.send(JSON.stringify({ target: "ESP", control: "SERVO2" ,value: e.target.value }));
+      });
+
+
+    </script>
+  </body>
+</html>

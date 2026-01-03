@@ -1,0 +1,2 @@
+source /home/spade/esp/hallowcam/build/bootloader/gdbinit/symbols
+source /home/spade/esp/hallowcam/build/bootloader/gdbinit/connect

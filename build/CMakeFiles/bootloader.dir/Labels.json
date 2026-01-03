@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/spade/esp/hallowcam/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

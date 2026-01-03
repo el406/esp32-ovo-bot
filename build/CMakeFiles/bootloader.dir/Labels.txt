@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/spade/esp/hallowcam/build/CMakeFiles/bootloader
+/home/spade/esp/hallowcam/build/CMakeFiles/bootloader.rule
+/home/spade/esp/hallowcam/build/CMakeFiles/bootloader-complete.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/spade/esp/hallowcam/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

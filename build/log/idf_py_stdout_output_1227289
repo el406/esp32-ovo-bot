@@ -1,0 +1,173 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a8h (374184) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5d0 vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (275) esp_image: segment 5: paddr=0009d35c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (305) app_init: Project name:     hallowcam[0m
+[0;32mI (309) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  922f1c154...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (359) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[1;31mE (419) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (419) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (419) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (429) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (429) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (439) ov7725: Mismatch PID=0x1[0m
+[1;31mE (439) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (449) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (449) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (459) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (469) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xff, data:0x01, ret:259[0m
+[1;31mE (469) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (479) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (479) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (489) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (499) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (499) ov7760: Mismatch PID=0x1[0m
+[1;31mE (509) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (509) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (519) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (519) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (529) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf1, data:0x48, ret:259[0m
+[1;31mE (539) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (539) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (539) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (549) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (559) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf0, data:0x48, ret:259[0m
+[0;32mI (559) gc032a: Mismatch PID=0x4848[0m
+[1;31mE (569) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (569) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (579) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (579) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (589) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xfe, data:0x00, ret:259[0m
+[1;31mE (599) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (599) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (609) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (609) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (619) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x00, data:0x85, ret:259[0m
+[0;32mI (629) gc0308: Mismatch PID=0x85[0m
+[1;31mE (629) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (629) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (639) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (649) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (649) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (659) ov7725: Mismatch PID=0x1[0m
+[1;31mE (659) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (669) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (669) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (679) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (689) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xff, data:0x01, ret:259[0m
+[1;31mE (689) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (699) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (699) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (709) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (719) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (719) ov7760: Mismatch PID=0x1[0m
+[1;31mE (729) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (729) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (729) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (739) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (749) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf1, data:0x48, ret:259[0m
+[1;31mE (759) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (759) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (759) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (769) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (779) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf0, data:0x48, ret:259[0m
+[0;32mI (779) gc032a: Mismatch PID=0x4848[0m
+[1;31mE (789) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (789) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (799) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (799) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (809) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xfe, data:0x00, ret:259[0m
+[1;31mE (819) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (819) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (829) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (829) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (839) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x00, data:0x85, ret:259[0m
+[0;32mI (849) gc0308: Mismatch PID=0x85[0m
+[1;31mE (849) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (849) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (859) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (869) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (869) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (879) ov7725: Mismatch PID=0x1[0m
+[1;31mE (879) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (889) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (889) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (899) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (909) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xff, data:0x01, ret:259[0m
+[1;31mE (909) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (919) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (919) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (929) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (939) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (939) ov7760: Mismatch PID=0x1[0m
+[1;31mE (939) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (949) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (949) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (959) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (969) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf1, data:0x48, ret:259[0m
+[1;31mE (969) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (979) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (979) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (989) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (999) sccb-ng: SCCB_Read Failed addr:0x21, reg:0xf0, data:0x48, ret:259[0m
+[0;32mI (999) gc032a: Mismatch PID=0x4848[0m
+[1;31mE (1009) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (1009) i2c.master: I2C transaction unexpected nack detected[0m
+[1;31mE (1019) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (1019) i2c.master: i2c_master_multi_buffer_transmit(1214): I2C transaction failed[0m
+[1;31mE (1029) sccb-ng: SCCB_Write Failed addr:0x21, reg:0xfe, data:0x00, ret:259[0m
+[1;31mE (1039) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (1039) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (1049) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (1049) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (1059) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x00, data:0x85, ret:259[0m
+[0;32mI (1069) gc0308: Mismatch PID=0x85[0m
+[1;31mE (1069) camera: Detected camera not supported.[0m
+[1;31mE (1069) camera: Camera probe failed with error 0x106(ESP_ERR_NOT_SUPPORTED)[0m
+[1;31mE (1079) Hallowcam: Camera Init Failed[0m
+[0;32mI (1079) main_task: Returned from app_main()[0m

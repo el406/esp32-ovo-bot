@@ -1,0 +1,499 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fef4h (130804) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002ff1c vaddr=3ffb0000 size=000fch (   252) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fd8h (671704) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4000 vaddr=3ffb00fc size=03e88h ( 16008) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e90 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (412) esp_image: segment 5: paddr=000f07e0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  5f8134615...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (464) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (487) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (510) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (515) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (998) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (998) wifi:enable tsf[0m
+[0;32mI (998) Hallowcam: STA initialization complete[0m
+[0;32mI (998) Hallowcam: Connecting to AP...[0m
+[0;32mI (1018) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1018) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1068) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1088) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1118) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1118) wifi:security: WPA2-PSK, phy: bgn, rssi: -35[0m
+[0;32mI (1118) wifi:pm start, type: 1[0m
+
+[0;32mI (1118) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1188) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1218) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2118) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2618) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2618) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2618) Hallowcam: Connected to ap[0m
+[0;32mI (2618) Hallowcam: Setting up websocket...[0m
+[0;32mI (2618) Hallowcam: Connecting to wss://192.168.1.158:8088...[0m
+[0;33mW (2628) websocket_client: `reconnect_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;33mW (2638) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2658) websocket_client: Started[0m
+[1;31mE (2658) websocket_client: Websocket client is not connected[0m
+[1;31mE (2778) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (2778) esp-tls: Failed to open new connection[0m
+[1;31mE (2778) transport_base: Failed to open a new connection[0m
+[1;31mE (2778) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (2788) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (2808) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (2808) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (2818) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[0;32mI (12658) Hallowcam: No data received for 10 seconds, signaling shutdown[0m
+[1;31mE (13308) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (13318) esp-tls: Failed to open new connection[0m
+[1;31mE (13318) transport_base: Failed to open a new connection[0m
+[1;31mE (13318) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (13328) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (13338) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (13348) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (13348) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (23958) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (23958) esp-tls: Failed to open new connection[0m
+[1;31mE (23958) transport_base: Failed to open a new connection[0m
+[1;31mE (23958) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (23968) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (23988) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (23988) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (23988) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (34398) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (34398) esp-tls: Failed to open new connection[0m
+[1;31mE (34398) transport_base: Failed to open a new connection[0m
+[1;31mE (34408) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (34408) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (34428) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (34428) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (34438) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (44858) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (44858) esp-tls: Failed to open new connection[0m
+[1;31mE (44858) transport_base: Failed to open a new connection[0m
+[1;31mE (44868) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (44878) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (44888) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (44898) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (44898) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (55298) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (55298) esp-tls: Failed to open new connection[0m
+[1;31mE (55298) transport_base: Failed to open a new connection[0m
+[1;31mE (55308) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (55308) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (55328) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (55328) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (55338) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (65348) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (65348) esp-tls: Failed to open new connection[0m
+[1;31mE (65348) transport_base: Failed to open a new connection[0m
+[1;31mE (65358) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (65358) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (65378) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (65378) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (65388) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (75878) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (75878) esp-tls: Failed to open new connection[0m
+[1;31mE (75878) transport_base: Failed to open a new connection[0m
+[1;31mE (75878) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (75888) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (75908) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (75908) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (75908) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (85928) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (85928) esp-tls: Failed to open new connection[0m
+[1;31mE (85928) transport_base: Failed to open a new connection[0m
+[1;31mE (85928) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (85938) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (85958) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (85958) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (85968) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (96148) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (96148) esp-tls: Failed to open new connection[0m
+[1;31mE (96148) transport_base: Failed to open a new connection[0m
+[1;31mE (96148) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (96158) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (96178) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (96178) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (96188) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (106218) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (106218) esp-tls: Failed to open new connection[0m
+[1;31mE (106218) transport_base: Failed to open a new connection[0m
+[1;31mE (106218) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (106228) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (106248) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (106248) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (106258) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (116728) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (116728) esp-tls: Failed to open new connection[0m
+[1;31mE (116728) transport_base: Failed to open a new connection[0m
+[1;31mE (116738) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (116738) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (116758) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (116758) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (116768) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (127178) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (127178) esp-tls: Failed to open new connection[0m
+[1;31mE (127178) transport_base: Failed to open a new connection[0m
+[1;31mE (127178) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (127188) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (127208) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (127208) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (127208) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (137408) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (137418) esp-tls: Failed to open new connection[0m
+[1;31mE (137418) transport_base: Failed to open a new connection[0m
+[1;31mE (137418) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (137428) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (137438) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (137448) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (137448) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (147778) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (147788) esp-tls: Failed to open new connection[0m
+[1;31mE (147788) transport_base: Failed to open a new connection[0m
+[1;31mE (147788) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (147798) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (147808) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (147818) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (147818) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (157848) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (157848) esp-tls: Failed to open new connection[0m
+[1;31mE (157848) transport_base: Failed to open a new connection[0m
+[1;31mE (157858) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (157858) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (157878) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (157878) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (157888) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (173068) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (173068) esp-tls: Failed to open new connection[0m
+[1;31mE (173068) transport_base: Failed to open a new connection[0m
+[1;31mE (173078) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (173088) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (173098) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (173108) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (173108) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (183218) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (183218) esp-tls: Failed to open new connection[0m
+[1;31mE (183218) transport_base: Failed to open a new connection[0m
+[1;31mE (183228) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (183228) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (183248) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (183248) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (183258) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (193838) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (193838) esp-tls: Failed to open new connection[0m
+[1;31mE (193838) transport_base: Failed to open a new connection[0m
+[1;31mE (193848) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (193848) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (193868) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (193868) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (193878) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (204308) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (204318) esp-tls: Failed to open new connection[0m
+[1;31mE (204318) transport_base: Failed to open a new connection[0m
+[1;31mE (204318) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (204328) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (204338) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (204348) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (204348) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (214358) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (214368) esp-tls: Failed to open new connection[0m
+[1;31mE (214368) transport_base: Failed to open a new connection[0m
+[1;31mE (214368) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (214378) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (214388) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (214398) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (214398) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (224448) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (224448) esp-tls: Failed to open new connection[0m
+[1;31mE (224448) transport_base: Failed to open a new connection[0m
+[1;31mE (224458) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (224468) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (224478) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (224488) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (224488) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (234588) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (234588) esp-tls: Failed to open new connection[0m
+[1;31mE (234588) transport_base: Failed to open a new connection[0m
+[1;31mE (234598) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (234598) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (234618) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (234618) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (234628) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (250078) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (250078) esp-tls: Failed to open new connection[0m
+[1;31mE (250078) transport_base: Failed to open a new connection[0m
+[1;31mE (250088) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (250088) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (250108) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (250118) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (250118) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (265728) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (265728) esp-tls: Failed to open new connection[0m
+[1;31mE (265728) transport_base: Failed to open a new connection[0m
+[1;31mE (265728) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (265738) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (265748) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (265758) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (265758) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (275778) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (275778) esp-tls: Failed to open new connection[0m
+[1;31mE (275778) transport_base: Failed to open a new connection[0m
+[1;31mE (275778) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (275788) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (275808) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (275808) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (275818) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (285998) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (285998) esp-tls: Failed to open new connection[0m
+[1;31mE (285998) transport_base: Failed to open a new connection[0m
+[1;31mE (286008) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (286008) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (286028) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (286028) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (286038) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (296438) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (296448) esp-tls: Failed to open new connection[0m
+[1;31mE (296448) transport_base: Failed to open a new connection[0m
+[1;31mE (296448) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (296458) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (296468) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (296478) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (296478) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (306508) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (306508) esp-tls: Failed to open new connection[0m
+[1;31mE (306508) transport_base: Failed to open a new connection[0m
+[1;31mE (306508) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (306518) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (306538) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (306538) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (306538) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (316548) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (316558) esp-tls: Failed to open new connection[0m
+[1;31mE (316558) transport_base: Failed to open a new connection[0m
+[1;31mE (316558) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (316568) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (316578) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (316588) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (316588) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (327168) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (327168) esp-tls: Failed to open new connection[0m
+[1;31mE (327168) transport_base: Failed to open a new connection[0m
+[1;31mE (327168) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (327178) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (327188) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (327198) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (327198) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (337608) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (337608) esp-tls: Failed to open new connection[0m
+[1;31mE (337608) transport_base: Failed to open a new connection[0m
+[1;31mE (337618) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (337628) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (337638) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (337648) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (337648) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (352968) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (352968) esp-tls: Failed to open new connection[0m
+[1;31mE (352968) transport_base: Failed to open a new connection[0m
+[1;31mE (352978) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (352988) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (352998) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (353008) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (353008) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (363028) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (363028) esp-tls: Failed to open new connection[0m
+[1;31mE (363028) transport_base: Failed to open a new connection[0m
+[1;31mE (363028) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (363038) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (363058) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (363058) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (363058) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (373238) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (373248) esp-tls: Failed to open new connection[0m
+[1;31mE (373248) transport_base: Failed to open a new connection[0m
+[1;31mE (373248) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (373258) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (373268) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (373278) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (373278) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (383688) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (383688) esp-tls: Failed to open new connection[0m
+[1;31mE (383688) transport_base: Failed to open a new connection[0m
+[1;31mE (383698) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (383698) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (383718) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (383718) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (383728) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (399048) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (399048) esp-tls: Failed to open new connection[0m
+[1;31mE (399048) transport_base: Failed to open a new connection[0m
+[1;31mE (399048) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (399058) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (399078) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (399078) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (399088) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (409488) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (409488) esp-tls: Failed to open new connection[0m
+[1;31mE (409488) transport_base: Failed to open a new connection[0m
+[1;31mE (409498) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (409498) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (409518) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (409518) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (409528) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (419528) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (419528) esp-tls: Failed to open new connection[0m
+[1;31mE (419528) transport_base: Failed to open a new connection[0m
+[1;31mE (419538) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (419548) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (419558) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (419568) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (419568) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (429588) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (429588) esp-tls: Failed to open new connection[0m
+[1;31mE (429588) transport_base: Failed to open a new connection[0m
+[1;31mE (429588) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (429598) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (429618) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (429618) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (429628) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (439648) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (439648) esp-tls: Failed to open new connection[0m
+[1;31mE (439648) transport_base: Failed to open a new connection[0m
+[1;31mE (439648) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (439658) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (439668) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (439678) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (439678) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (450048) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (450048) esp-tls: Failed to open new connection[0m
+[1;31mE (450048) transport_base: Failed to open a new connection[0m
+[1;31mE (450048) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (450058) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (450078) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (450078) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (450078) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (460488) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (460488) esp-tls: Failed to open new connection[0m
+[1;31mE (460488) transport_base: Failed to open a new connection[0m
+[1;31mE (460498) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (460498) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (460518) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (460518) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (460528) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (470548) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (470548) esp-tls: Failed to open new connection[0m
+[1;31mE (470548) transport_base: Failed to open a new connection[0m
+[1;31mE (470558) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (470558) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (470578) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (470588) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (470588) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (485988) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (485988) esp-tls: Failed to open new connection[0m
+[1;31mE (485988) transport_base: Failed to open a new connection[0m
+[1;31mE (485998) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (485998) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (486018) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (486028) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (486028) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (501048) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (501048) esp-tls: Failed to open new connection[0m
+[1;31mE (501048) transport_base: Failed to open a new connection[0m
+[1;31mE (501048) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (501058) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (501078) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (501078) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (501088) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (511098) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (511098) esp-tls: Failed to open new connection[0m
+[1;31mE (511098) transport_base: Failed to open a new connection[0m
+[1;31mE (511098) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (511108) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (511128) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (511128) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (511138) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m
+[1;31mE (521618) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (521618) esp-tls: Failed to open new connection[0m
+[1;31mE (521618) transport_base: Failed to open a new connection[0m
+[1;31mE (521618) transport_ws: Error connecting to host 192.168.1.158:8088[0m
+[1;31mE (521628) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=0, errno=119[0m
+[0;32mI (521648) Hallowcam: WEBSOCKET_EVENT_ERROR[0m
+[0;32mI (521648) websocket_client: Reconnect after 10000 ms[0m
+[0;32mI (521658) Hallowcam: WEBSOCKET_EVENT_DISCONNECTED[0m

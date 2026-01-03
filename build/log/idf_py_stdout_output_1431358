@@ -1,0 +1,78 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/spade/esp/hallowcam/build/bootloader/esp-idf/esptool_py && /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/spade/esp/hallowcam/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj
+FAILED: esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj 
+/home/spade/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.1\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/spade/esp/hallowcam/build/config -I/home/spade/esp/hallowcam/components/i2c_parallel/include -I/home/spade/esp/esp-idf/components/newlib/platform_include -I/home/spade/esp/esp-idf/components/freertos/config/include -I/home/spade/esp/esp-idf/components/freertos/config/include/freertos -I/home/spade/esp/esp-idf/components/freertos/config/xtensa/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/spade/esp/esp-idf/components/freertos/esp_additions/include -I/home/spade/esp/esp-idf/components/esp_hw_support/include -I/home/spade/esp/esp-idf/components/esp_hw_support/include/soc -I/home/spade/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/spade/esp/esp-idf/components/esp_hw_support/dma/include -I/home/spade/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/spade/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/spade/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/spade/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/spade/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/spade/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/spade/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/spade/esp/esp-idf/components/heap/include -I/home/spade/esp/esp-idf/components/heap/tlsf -I/home/spade/esp/esp-idf/components/log/include -I/home/spade/esp/esp-idf/components/soc/include -I/home/spade/esp/esp-idf/components/soc/esp32 -I/home/spade/esp/esp-idf/components/soc/esp32/include -I/home/spade/esp/esp-idf/components/soc/esp32/register -I/home/spade/esp/esp-idf/components/hal/platform_port/include -I/home/spade/esp/esp-idf/components/hal/esp32/include -I/home/spade/esp/esp-idf/components/hal/include -I/home/spade/esp/esp-idf/components/esp_rom/include -I/home/spade/esp/esp-idf/components/esp_rom/esp32/include -I/home/spade/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/spade/esp/esp-idf/components/esp_rom/esp32 -I/home/spade/esp/esp-idf/components/esp_common/include -I/home/spade/esp/esp-idf/components/esp_system/include -I/home/spade/esp/esp-idf/components/esp_system/port/soc -I/home/spade/esp/esp-idf/components/esp_system/port/include/private -I/home/spade/esp/esp-idf/components/xtensa/esp32/include -I/home/spade/esp/esp-idf/components/xtensa/include -I/home/spade/esp/esp-idf/components/xtensa/deprecated_include -I/home/spade/esp/esp-idf/components/lwip/include -I/home/spade/esp/esp-idf/components/lwip/include/apps -I/home/spade/esp/esp-idf/components/lwip/include/apps/sntp -I/home/spade/esp/esp-idf/components/lwip/lwip/src/include -I/home/spade/esp/esp-idf/components/lwip/port/include -I/home/spade/esp/esp-idf/components/lwip/port/freertos/include -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/spade/esp/esp-idf/components/esp_driver_gpio/include -I/home/spade/esp/esp-idf/components/driver/deprecated -I/home/spade/esp/esp-idf/components/driver/i2c/include -I/home/spade/esp/esp-idf/components/driver/touch_sensor/include -I/home/spade/esp/esp-idf/components/driver/twai/include -I/home/spade/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/spade/esp/esp-idf/components/esp_pm/include -I/home/spade/esp/esp-idf/components/esp_ringbuf/include -I/home/spade/esp/esp-idf/components/esp_driver_pcnt/include -I/home/spade/esp/esp-idf/components/esp_driver_gptimer/include -I/home/spade/esp/esp-idf/components/esp_driver_spi/include -I/home/spade/esp/esp-idf/components/esp_driver_mcpwm/include -I/home/spade/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/home/spade/esp/esp-idf/components/esp_driver_i2s/include -I/home/spade/esp/esp-idf/components/esp_driver_sdmmc/include -I/home/spade/esp/esp-idf/components/sdmmc/include -I/home/spade/esp/esp-idf/components/esp_driver_sdspi/include -I/home/spade/esp/esp-idf/components/esp_driver_sdio/include -I/home/spade/esp/esp-idf/components/esp_driver_dac/include -I/home/spade/esp/esp-idf/components/esp_driver_rmt/include -I/home/spade/esp/esp-idf/components/esp_driver_tsens/include -I/home/spade/esp/esp-idf/components/esp_driver_sdm/include -I/home/spade/esp/esp-idf/components/esp_driver_i2c/include -I/home/spade/esp/esp-idf/components/esp_driver_uart/include -I/home/spade/esp/esp-idf/components/vfs/include -I/home/spade/esp/esp-idf/components/esp_driver_ledc/include -I/home/spade/esp/esp-idf/components/esp_driver_parlio/include -I/home/spade/esp/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/spade/esp/esp-idf/components/esp_driver_twai/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/spade/esp/hallowcam=. -fmacro-prefix-map=/home/spade/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj -MF esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj.d -o esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj -c /home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c
+In file included from /home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:7:
+/home/spade/esp/esp-idf/components/driver/deprecated/driver/periph_ctrl.h:7:2: warning: #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions. [-Wcpp]
+    7 | #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions.
+      |  ^~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:12:8: error: unknown type name 'i2s_dev_t'
+   12 | static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+      |        ^~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:12:23: error: 'I2S_NUM_MAX' undeclared here (not in a function); did you mean 'GPIO_NUM_MAX'?
+   12 | static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+      |                       ^~~~~~~~~~~
+      |                       GPIO_NUM_MAX
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:12:40: error: 'I2S0' undeclared here (not in a function); did you mean 'I2S'?
+   12 | static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+      |                                        ^~~~
+      |                                        I2S
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:12:47: error: 'I2S1' undeclared here (not in a function); did you mean 'I2S'?
+   12 | static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+      |                                               ^~~~
+      |                                               I2S
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:14:33: error: unknown type name 'i2s_parallel_sample_width_t'
+   14 | static inline int get_bus_width(i2s_parallel_sample_width_t width) {
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c: In function 'iomux_set_signal':
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:31:3: error: implicit declaration of function 'PIN_FUNC_SELECT' [-Wimplicit-function-declaration]
+   31 |   PIN_FUNC_SELECT(GPIO_PIN_MUX_REG[gpio], PIN_FUNC_GPIO);
+      |   ^~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:31:19: error: 'GPIO_PIN_MUX_REG' undeclared (first use in this function); did you mean 'GPIO_PIN31_REG'?
+   31 |   PIN_FUNC_SELECT(GPIO_PIN_MUX_REG[gpio], PIN_FUNC_GPIO);
+      |                   ^~~~~~~~~~~~~~~~
+      |                   GPIO_PIN31_REG
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:31:19: note: each undeclared identifier is reported only once for each function it appears in
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:31:43: error: 'PIN_FUNC_GPIO' undeclared (first use in this function)
+   31 |   PIN_FUNC_SELECT(GPIO_PIN_MUX_REG[gpio], PIN_FUNC_GPIO);
+      |                                           ^~~~~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c: At top level:
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:36:23: error: unknown type name 'i2s_dev_t'
+   36 | static void dma_reset(i2s_dev_t* dev) {
+      |                       ^~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:43:24: error: unknown type name 'i2s_dev_t'
+   43 | static void fifo_reset(i2s_dev_t* dev) {
+      |                        ^~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:52:23: error: unknown type name 'i2s_dev_t'
+   52 | static void dev_reset(i2s_dev_t* dev) {
+      |                       ^~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:61:39: error: unknown type name 'i2s_port_t'
+   61 | esp_err_t i2s_parallel_driver_install(i2s_port_t port, i2s_parallel_config_t* conf, bool invert_clk, intr_handler_t irq_hndlr, void* priv) {
+      |                                       ^~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:61:56: error: unknown type name 'i2s_parallel_config_t'
+   61 | esp_err_t i2s_parallel_driver_install(i2s_port_t port, i2s_parallel_config_t* conf, bool invert_clk, intr_handler_t irq_hndlr, void* priv) {
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:193:33: error: unknown type name 'i2s_port_t'
+  193 | esp_err_t i2s_parallel_send_dma(i2s_port_t port, lldesc_t* dma_descriptor) {
+      |                                 ^~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:193:50: error: unknown type name 'lldesc_t'
+  193 | esp_err_t i2s_parallel_send_dma(i2s_port_t port, lldesc_t* dma_descriptor) {
+      |                                                  ^~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:216:1: error: unknown type name 'i2s_dev_t'
+  216 | i2s_dev_t* i2s_parallel_get_dev(i2s_port_t port) {
+      | ^~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:216:33: error: unknown type name 'i2s_port_t'
+  216 | i2s_dev_t* i2s_parallel_get_dev(i2s_port_t port) {
+      |                                 ^~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:27:13: warning: 'iomux_set_signal' defined but not used [-Wunused-function]
+   27 | static void iomux_set_signal(int gpio, int signal) {
+      |             ^~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:12:19: warning: 'I2S' defined but not used [-Wunused-variable]
+   12 | static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+      |                   ^~~
+ninja: build stopped: subcommand failed.

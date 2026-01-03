@@ -1,0 +1,1359 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (412) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (464) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (487) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (510) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (515) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (998) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (998) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1018) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1058) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1108) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1108) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (1118) wifi:pm start, type: 1[0m
+
+[0;32mI (1118) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1198) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1238) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2678) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2678) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2678) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (998) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (998) wifi:enable tsf[0m
+[0;32mI (998) Hallowcam: STA initialization complete[0m
+[0;32mI (998) Hallowcam: Connecting to AP...[0m
+[0;32mI (1018) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1018) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1028) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1068) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1068) wifi:security: WPA2-PSK, phy: bgn, rssi: -33[0m
+[0;32mI (1078) wifi:pm start, type: 1[0m
+
+[0;32mI (1078) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1088) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1098) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1808) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2148) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2148) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2148) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (998) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (998) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1048) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1098) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1118) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1118) wifi:security: WPA2-PSK, phy: bgn, rssi: -32[0m
+[0;32mI (1128) wifi:pm start, type: 1[0m
+
+[0;32mI (1128) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1168) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1198) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2228) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2228) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2228) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060a30  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1008) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (1008) wifi:enable tsf[0m
+[0;32mI (1008) Hallowcam: STA initialization complete[0m
+[0;32mI (1008) Hallowcam: Connecting to AP...[0m
+[0;32mI (1028) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1028) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1038) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1168) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1168) wifi:security: WPA2-PSK, phy: bgn, rssi: -32[0m
+[0;32mI (1168) wifi:pm start, type: 1[0m
+
+[0;32mI (1168) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1208) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1228) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1768) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2258) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2258) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2258) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060c30  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (998) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (998) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1048) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1058) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1188) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1188) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (1188) wifi:pm start, type: 1[0m
+
+[0;32mI (1188) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1218) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1238) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2238) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2738) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2738) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2738) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060a30  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (998) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (998) wifi:enable tsf[0m
+[0;32mI (998) Hallowcam: STA initialization complete[0m
+[0;32mI (998) Hallowcam: Connecting to AP...[0m
+[0;32mI (1038) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1038) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1068) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1108) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1148) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1158) wifi:security: WPA2-PSK, phy: bgn, rssi: -33[0m
+[0;32mI (1158) wifi:pm start, type: 1[0m
+
+[0;32mI (1158) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1168) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1208) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1788) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2298) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2298) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2298) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (998) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1008) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1038) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1068) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1068) wifi:security: WPA2-PSK, phy: bgn, rssi: -32[0m
+[0;32mI (1068) wifi:pm start, type: 1[0m
+
+[0;32mI (1068) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1128) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1128) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2168) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2168) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2168) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (958) wifi:enable tsf[0m
+[0;32mI (958) Hallowcam: STA initialization complete[0m
+[0;32mI (968) Hallowcam: Connecting to AP...[0m
+[0;32mI (978) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (978) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1018) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1078) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1078) wifi:security: WPA2-PSK, phy: bgn, rssi: -26[0m
+[0;32mI (1078) wifi:pm start, type: 1[0m
+
+[0;32mI (1078) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1118) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1168) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2158) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2198) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2198) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2198) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (958) wifi:enable tsf[0m
+[0;32mI (958) Hallowcam: STA initialization complete[0m
+[0;32mI (958) Hallowcam: Connecting to AP...[0m
+[0;32mI (978) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (978) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1048) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1088) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1128) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1128) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (1128) wifi:pm start, type: 1[0m
+
+[0;32mI (1128) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1158) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1188) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1688) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2188) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2188) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2188) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060a30  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (998) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (998) wifi:enable tsf[0m
+[0;32mI (998) Hallowcam: STA initialization complete[0m
+[0;32mI (998) Hallowcam: Connecting to AP...[0m
+[0;32mI (1018) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1018) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1048) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1068) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1098) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1098) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (1108) wifi:pm start, type: 1[0m
+
+[0;32mI (1108) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1158) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1258) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1278) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2188) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2188) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2188) Hallowcam: Connected to ap[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801614cd  A1      : 0x3ffba630  
+A2      : 0x00000001  A3      : 0xfffffffd  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffba5f0  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba874  A13     : 0x00000000  
+A14     : 0x3f4042b1  A15     : 0x3ffba844  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000001  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400014d9:0x3ffba630 0x401614ca:0x3ffba640 0x4015ad71:0x3ffba960 0x4008fd43:0x3ffba990 0x400d8d46:0x3ffba9f0 0x400d8ef5:0x3ffbaa10 0x401720d4:0x3ffbab10 0x40089b81:0x3ffbab40
+
+
+
+
+ELF file SHA256: 0472e68f3
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fec4h (130756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002feec vaddr=3ffb0000 size=0012ch (   300) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fdch (671708) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4004 vaddr=3ffb012c size=03e58h ( 15960) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e64 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  0472e68f3...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+I (467) efuse_init: Max chip rev:     v3.99 
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (1008) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1008) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1028) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1108) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1108) wifi:security: WPA2-PSK, phy: bgn, rssi: -37[0m
+[0;32mI (1118) wifi:pm start, type: 1[0m
+
+[0;32mI (1118) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1128) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1148) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m

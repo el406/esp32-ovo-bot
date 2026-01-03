@@ -1,0 +1,222 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/spade/esp/hallowcam/build/bootloader/esp-idf/esptool_py && /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/spade/esp/hallowcam/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hallowcam.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/hallowcam.c.obj 
+/home/spade/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5.1\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/spade/esp/hallowcam/build/config -I/home/spade/esp/hallowcam/main -I/home/spade/esp/esp-idf/components/newlib/platform_include -I/home/spade/esp/esp-idf/components/freertos/config/include -I/home/spade/esp/esp-idf/components/freertos/config/include/freertos -I/home/spade/esp/esp-idf/components/freertos/config/xtensa/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/spade/esp/esp-idf/components/freertos/esp_additions/include -I/home/spade/esp/esp-idf/components/esp_hw_support/include -I/home/spade/esp/esp-idf/components/esp_hw_support/include/soc -I/home/spade/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/spade/esp/esp-idf/components/esp_hw_support/dma/include -I/home/spade/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/spade/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/spade/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/spade/esp/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/spade/esp/esp-idf/components/esp_hw_support/power_supply/include -I/home/spade/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/spade/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/spade/esp/esp-idf/components/heap/include -I/home/spade/esp/esp-idf/components/heap/tlsf -I/home/spade/esp/esp-idf/components/log/include -I/home/spade/esp/esp-idf/components/soc/include -I/home/spade/esp/esp-idf/components/soc/esp32 -I/home/spade/esp/esp-idf/components/soc/esp32/include -I/home/spade/esp/esp-idf/components/soc/esp32/register -I/home/spade/esp/esp-idf/components/hal/platform_port/include -I/home/spade/esp/esp-idf/components/hal/esp32/include -I/home/spade/esp/esp-idf/components/hal/include -I/home/spade/esp/esp-idf/components/esp_rom/include -I/home/spade/esp/esp-idf/components/esp_rom/esp32/include -I/home/spade/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/spade/esp/esp-idf/components/esp_rom/esp32 -I/home/spade/esp/esp-idf/components/esp_common/include -I/home/spade/esp/esp-idf/components/esp_system/include -I/home/spade/esp/esp-idf/components/esp_system/port/soc -I/home/spade/esp/esp-idf/components/esp_system/port/include/private -I/home/spade/esp/esp-idf/components/xtensa/esp32/include -I/home/spade/esp/esp-idf/components/xtensa/include -I/home/spade/esp/esp-idf/components/xtensa/deprecated_include -I/home/spade/esp/esp-idf/components/lwip/include -I/home/spade/esp/esp-idf/components/lwip/include/apps -I/home/spade/esp/esp-idf/components/lwip/include/apps/sntp -I/home/spade/esp/esp-idf/components/lwip/lwip/src/include -I/home/spade/esp/esp-idf/components/lwip/port/include -I/home/spade/esp/esp-idf/components/lwip/port/freertos/include -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/spade/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/spade/esp/esp-idf/components/esp_wifi/include -I/home/spade/esp/esp-idf/components/esp_wifi/include/local -I/home/spade/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/spade/esp/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/spade/esp/esp-idf/components/esp_event/include -I/home/spade/esp/esp-idf/components/esp_phy/include -I/home/spade/esp/esp-idf/components/esp_phy/esp32/include -I/home/spade/esp/esp-idf/components/esp_netif/include -I/home/spade/esp/esp-idf/components/json/cJSON -I/home/spade/esp/esp-idf/components/esp_driver_gpio/include -I/home/spade/esp/esp-idf/components/nvs_flash/include -I/home/spade/esp/esp-idf/components/esp_partition/include -I/home/spade/esp/esp-idf/components/esp_driver_ledc/include -I/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/include -I/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/conversions/include -I/home/spade/esp/esp-idf/components/driver/deprecated -I/home/spade/esp/esp-idf/components/driver/i2c/include -I/home/spade/esp/esp-idf/components/driver/touch_sensor/include -I/home/spade/esp/esp-idf/components/driver/twai/include -I/home/spade/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/spade/esp/esp-idf/components/esp_pm/include -I/home/spade/esp/esp-idf/components/esp_ringbuf/include -I/home/spade/esp/esp-idf/components/esp_driver_pcnt/include -I/home/spade/esp/esp-idf/components/esp_driver_gptimer/include -I/home/spade/esp/esp-idf/components/esp_driver_spi/include -I/home/spade/esp/esp-idf/components/esp_driver_mcpwm/include -I/home/spade/esp/esp-idf/components/esp_driver_ana_cmpr/include -I/home/spade/esp/esp-idf/components/esp_driver_i2s/include -I/home/spade/esp/esp-idf/components/esp_driver_sdmmc/include -I/home/spade/esp/esp-idf/components/sdmmc/include -I/home/spade/esp/esp-idf/components/esp_driver_sdspi/include -I/home/spade/esp/esp-idf/components/esp_driver_sdio/include -I/home/spade/esp/esp-idf/components/esp_driver_dac/include -I/home/spade/esp/esp-idf/components/esp_driver_rmt/include -I/home/spade/esp/esp-idf/components/esp_driver_tsens/include -I/home/spade/esp/esp-idf/components/esp_driver_sdm/include -I/home/spade/esp/esp-idf/components/esp_driver_i2c/include -I/home/spade/esp/esp-idf/components/esp_driver_uart/include -I/home/spade/esp/esp-idf/components/vfs/include -I/home/spade/esp/esp-idf/components/esp_driver_parlio/include -I/home/spade/esp/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/spade/esp/esp-idf/components/esp_driver_twai/include -I/home/spade/esp/hallowcam/managed_components/espressif__esp_jpeg/include -I/home/spade/esp/hallowcam/managed_components/espressif__esp_websocket_client/include -I/home/spade/esp/esp-idf/components/esp-tls -I/home/spade/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/spade/esp/esp-idf/components/mbedtls/port/include -I/home/spade/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/spade/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/spade/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/spade/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/spade/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/spade/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/spade/esp/esp-idf/components/tcp_transport/include -I/home/spade/esp/esp-idf/components/esp_timer/include -I/home/spade/esp/esp-idf/components/http_parser -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/spade/esp/hallowcam=. -fmacro-prefix-map=/home/spade/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/hallowcam.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/hallowcam.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/hallowcam.c.obj -c /home/spade/esp/hallowcam/main/hallowcam.c
+/home/spade/esp/hallowcam/main/hallowcam.c: In function 'app_main':
+/home/spade/esp/hallowcam/main/hallowcam.c:165:3: error: unknown type name 'i2s_config_t'; did you mean 'i2c_config_t'?
+  165 |   i2s_config_t i2s_conf = {
+      |   ^~~~~~~~~~~~
+      |   i2c_config_t
+/home/spade/esp/hallowcam/main/hallowcam.c:166:7: error: field name not in record or union initializer
+  166 |       .mode = I2S_MODE_MASTER | I2S_MODE_RX, // Master receive
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:166:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:166:15: error: 'I2S_MODE_MASTER' undeclared (first use in this function); did you mean 'I2C_MODE_MASTER'?
+  166 |       .mode = I2S_MODE_MASTER | I2S_MODE_RX, // Master receive
+      |               ^~~~~~~~~~~~~~~
+      |               I2C_MODE_MASTER
+/home/spade/esp/hallowcam/main/hallowcam.c:166:15: note: each undeclared identifier is reported only once for each function it appears in
+/home/spade/esp/hallowcam/main/hallowcam.c:166:33: error: 'I2S_MODE_RX' undeclared (first use in this function); did you mean 'I2C_MODE_MAX'?
+  166 |       .mode = I2S_MODE_MASTER | I2S_MODE_RX, // Master receive
+      |                                 ^~~~~~~~~~~
+      |                                 I2C_MODE_MAX
+/home/spade/esp/hallowcam/main/hallowcam.c:167:7: error: field name not in record or union initializer
+  167 |       .sample_rate = 10 * 1000 * 1000,       // PCLK (approx 10 MHz)
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:167:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:167:22: warning: excess elements in scalar initializer
+  167 |       .sample_rate = 10 * 1000 * 1000,       // PCLK (approx 10 MHz)
+      |                      ^~
+/home/spade/esp/hallowcam/main/hallowcam.c:167:22: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:168:7: error: field name not in record or union initializer
+  168 |       .bits_per_sample = I2S_BITS_PER_SAMPLE_8BIT,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:168:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:168:26: error: 'I2S_BITS_PER_SAMPLE_8BIT' undeclared (first use in this function)
+  168 |       .bits_per_sample = I2S_BITS_PER_SAMPLE_8BIT,
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:168:26: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:168:26: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:169:7: error: field name not in record or union initializer
+  169 |       .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:169:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:169:25: error: 'I2S_CHANNEL_FMT_ONLY_LEFT' undeclared (first use in this function)
+  169 |       .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:169:25: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:169:25: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:170:7: error: field name not in record or union initializer
+  170 |       .communication_format = I2S_COMM_FORMAT_STAND_I2S,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:170:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:170:31: error: 'I2S_COMM_FORMAT_STAND_I2S' undeclared (first use in this function)
+  170 |       .communication_format = I2S_COMM_FORMAT_STAND_I2S,
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:170:31: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:170:31: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:171:7: error: field name not in record or union initializer
+  171 |       .dma_buf_count = 4,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:171:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:171:24: warning: excess elements in scalar initializer
+  171 |       .dma_buf_count = 4,
+      |                        ^
+/home/spade/esp/hallowcam/main/hallowcam.c:171:24: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:172:7: error: field name not in record or union initializer
+  172 |       .dma_buf_len = 1024,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:172:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:172:22: warning: excess elements in scalar initializer
+  172 |       .dma_buf_len = 1024,
+      |                      ^~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:172:22: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:173:7: error: field name not in record or union initializer
+  173 |       .use_apll = false,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:173:7: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:173:19: warning: excess elements in scalar initializer
+  173 |       .use_apll = false,
+      |                   ^~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:173:19: note: (near initialization for 'i2s_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:174:7: error: field name not in record or union initializer
+  174 |       .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:174:7: note: (near initialization for 'i2s_conf')
+In file included from /home/spade/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:13,
+                 from /home/spade/esp/hallowcam/main/hallowcam.c:2:
+/home/spade/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:33:37: warning: excess elements in scalar initializer
+   33 | #define ESP_INTR_FLAG_LEVEL1        (1<<1)  ///< Accept a Level 1 interrupt vector (lowest priority)
+      |                                     ^
+/home/spade/esp/hallowcam/main/hallowcam.c:174:27: note: in expansion of macro 'ESP_INTR_FLAG_LEVEL1'
+  174 |       .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
+      |                           ^~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:33:37: note: (near initialization for 'i2s_conf')
+   33 | #define ESP_INTR_FLAG_LEVEL1        (1<<1)  ///< Accept a Level 1 interrupt vector (lowest priority)
+      |                                     ^
+/home/spade/esp/hallowcam/main/hallowcam.c:174:27: note: in expansion of macro 'ESP_INTR_FLAG_LEVEL1'
+  174 |       .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
+      |                           ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/spade/esp/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:12:
+/home/spade/esp/hallowcam/main/hallowcam.c:177:19: error: implicit declaration of function 'i2s_driver_install'; did you mean 'i2c_driver_install'? [-Wimplicit-function-declaration]
+  177 |   ESP_ERROR_CHECK(i2s_driver_install(I2S_NUM_0, &i2s_conf, 0, NULL));
+      |                   ^~~~~~~~~~~~~~~~~~
+/home/spade/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+/home/spade/esp/hallowcam/main/hallowcam.c:180:3: error: unknown type name 'i2s_parallel_config_t'; did you mean 'i2s_std_clk_config_t'?
+  180 |   i2s_parallel_config_t parallel_conf = {
+      |   ^~~~~~~~~~~~~~~~~~~~~
+      |   i2s_std_clk_config_t
+/home/spade/esp/hallowcam/main/hallowcam.c:181:7: error: field name not in record or union initializer
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:181:7: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:7: warning: braces around scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:7: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:20: error: 'D0_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                    ^~~~~~
+      |                    SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:28: error: 'D1_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                            ^~~~~~
+      |                            SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:28: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:28: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:36: error: 'D2_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                                    ^~~~~~
+      |                                    SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:36: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:36: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:44: error: 'D3_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                                            ^~~~~~
+      |                                            SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:44: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:44: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:52: error: 'D4_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                                                    ^~~~~~
+      |                                                    SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:52: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:52: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:60: error: 'D5_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                                                            ^~~~~~
+      |                                                            SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:60: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:60: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:181:68: error: 'D6_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  181 |       .gpio_bus = {D0_PIN, D1_PIN, D2_PIN, D3_PIN, D4_PIN, D5_PIN, D6_PIN,
+      |                                                                    ^~~~~~
+      |                                                                    SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:181:68: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:181:68: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:182:20: error: 'D7_PIN' undeclared (first use in this function); did you mean 'SDA_PIN'?
+  182 |                    D7_PIN},
+      |                    ^~~~~~
+      |                    SDA_PIN
+/home/spade/esp/hallowcam/main/hallowcam.c:182:20: warning: excess elements in scalar initializer
+/home/spade/esp/hallowcam/main/hallowcam.c:182:20: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:183:7: error: field name not in record or union initializer
+  183 |       .gpio_pclk = PCLK_PIN,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:183:7: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:52:18: warning: excess elements in scalar initializer
+   52 | #define PCLK_PIN GPIO_NUM_35
+      |                  ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:183:20: note: in expansion of macro 'PCLK_PIN'
+  183 |       .gpio_pclk = PCLK_PIN,
+      |                    ^~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:52:18: note: (near initialization for 'parallel_conf')
+   52 | #define PCLK_PIN GPIO_NUM_35
+      |                  ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:183:20: note: in expansion of macro 'PCLK_PIN'
+  183 |       .gpio_pclk = PCLK_PIN,
+      |                    ^~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:184:7: error: field name not in record or union initializer
+  184 |       .gpio_vsync = VSYNC_PIN,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:184:7: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:53:19: warning: excess elements in scalar initializer
+   53 | #define VSYNC_PIN GPIO_NUM_27
+      |                   ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:184:21: note: in expansion of macro 'VSYNC_PIN'
+  184 |       .gpio_vsync = VSYNC_PIN,
+      |                     ^~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:53:19: note: (near initialization for 'parallel_conf')
+   53 | #define VSYNC_PIN GPIO_NUM_27
+      |                   ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:184:21: note: in expansion of macro 'VSYNC_PIN'
+  184 |       .gpio_vsync = VSYNC_PIN,
+      |                     ^~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:185:7: error: field name not in record or union initializer
+  185 |       .gpio_href = HREF_PIN,
+      |       ^
+/home/spade/esp/hallowcam/main/hallowcam.c:185:7: note: (near initialization for 'parallel_conf')
+/home/spade/esp/hallowcam/main/hallowcam.c:54:18: warning: excess elements in scalar initializer
+   54 | #define HREF_PIN GPIO_NUM_14
+      |                  ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:185:20: note: in expansion of macro 'HREF_PIN'
+  185 |       .gpio_href = HREF_PIN,
+      |                    ^~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:54:18: note: (near initialization for 'parallel_conf')
+   54 | #define HREF_PIN GPIO_NUM_14
+      |                  ^~~~~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:185:20: note: in expansion of macro 'HREF_PIN'
+  185 |       .gpio_href = HREF_PIN,
+      |                    ^~~~~~~~
+/home/spade/esp/hallowcam/main/hallowcam.c:189:7: error: implicit declaration of function 'i2s_parallel_driver_install' [-Wimplicit-function-declaration]
+  189 |       i2s_parallel_driver_install(I2S_NUM_0, &i2s_conf, &parallel_conf));
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/spade/esp/esp-idf/components/esp_common/include/esp_err.h:116:30: note: in definition of macro 'ESP_ERROR_CHECK'
+  116 |         esp_err_t err_rc_ = (x);                                        \
+      |                              ^
+ninja: build stopped: subcommand failed.

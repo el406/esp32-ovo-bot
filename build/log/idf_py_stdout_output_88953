@@ -1,0 +1,418 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fee4h (130788) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002ff0c vaddr=3ffb0000 size=0010ch (   268) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fd8h (671704) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4000 vaddr=3ffb010c size=03e78h ( 15992) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e80 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (443) cpu_start: Pro cpu start user code[0m
+[0;32mI (443) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  c845921d8...[0m
+[0;32mI (460) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (482) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (503) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (512) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (978) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (978) wifi:enable tsf[0m
+[0;32mI (978) Hallowcam: STA initialization complete[0m
+[0;32mI (978) Hallowcam: Connecting to AP...[0m
+[0;32mI (998) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (998) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1018) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1048) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1098) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1098) wifi:security: WPA2-PSK, phy: bgn, rssi: -25[0m
+[0;32mI (1098) wifi:pm start, type: 1[0m
+
+[0;32mI (1098) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1128) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1188) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (2178) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2178) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2178) Hallowcam: Connected to ap[0m
+[0;32mI (2178) Hallowcam: Setting up websocket...[0m
+[0;32mI (2178) Hallowcam: Connecting to ws://192.168.1.158:8080...[0m
+[0;33mW (2188) websocket_client: `reconnect_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;33mW (2198) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2218) websocket_client: Started[0m
+[1;31mE (2218) websocket_client: Websocket client is not connected[0m
+[0;32mI (2218) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (3458) Hallowcam: WEBSOCKET_EVENT_CONNECTED[0m
+[0;32mI (4228) Hallowcam: Sending hello 0000[0m
+[0;32mI (5228) Hallowcam: Sending hello 0001[0m
+[0;32mI (6228) Hallowcam: Sending hello 0002[0m
+[0;32mI (7228) Hallowcam: Sending hello 0003[0m
+[0;32mI (8228) Hallowcam: Sending hello 0004[0m
+[0;32mI (9238) Hallowcam: Sending hello 0005[0m
+[0;32mI (10238) Hallowcam: Sending hello 0006[0m
+[0;32mI (11238) Hallowcam: Sending hello 0007[0m
+[0;32mI (12228) Hallowcam: No data received for 10 seconds, signaling shutdown[0m
+[0;32mI (12238) Hallowcam: Sending hello 0008[0m
+[0;32mI (12578) Hallowcam: WEBSOCKET_EVENT_DATA[0m
+[0;32mI (12578) Hallowcam: Received opcode=10[0m
+[0;33mW (12578) Hallowcam: Received=[0m
+[0;33mW (12578) Hallowcam: Total payload length=0, data_len=0, current payload offset=0[0m
+
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d8927  PS      : 0x00060030  A0      : 0x8017046c  A1      : 0x3ffcadc0  
+A2      : 0x3ffc8b50  A3      : 0x3f40442c  A4      : 0x3ffb03d8  A5      : 0x00000000  
+A6      : 0x3f4042bc  A7      : 0x00000002  A8      : 0x800d8927  A9      : 0x3ffcada0  
+A10     : 0x00000000  A11     : 0x3f403d54  A12     : 0x3f403d04  A13     : 0x00003122  
+A14     : 0x3f4042bc  A15     : 0x00000000  SAR     : 0x00000012  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400d8924:0x3ffcadc0 0x40170469:0x3ffcadf0 0x4016fdd5:0x3ffcae20 0x400da173:0x3ffcae60 0x400da2e1:0x3ffcaec0 0x400da6cc:0x3ffcaef0 0x40089b81:0x3ffcaf30
+
+
+
+
+ELF file SHA256: c845921d8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fee4h (130788) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002ff0c vaddr=3ffb0000 size=0010ch (   268) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fd8h (671704) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4000 vaddr=3ffb010c size=03e78h ( 15992) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e80 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  c845921d8...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (988) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (988) wifi:enable tsf[0m
+[0;32mI (988) Hallowcam: STA initialization complete[0m
+[0;32mI (988) Hallowcam: Connecting to AP...[0m
+[0;32mI (1008) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1008) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1018) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1028) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1068) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1068) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (1078) wifi:pm start, type: 1[0m
+
+[0;32mI (1078) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1108) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1118) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1228) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2138) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2138) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2138) Hallowcam: Connected to ap[0m
+[0;32mI (2138) Hallowcam: Setting up websocket...[0m
+[0;32mI (2138) Hallowcam: Connecting to ws://192.168.1.158:8080...[0m
+[0;33mW (2148) websocket_client: `reconnect_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;33mW (2158) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2178) websocket_client: Started[0m
+[1;31mE (2178) websocket_client: Websocket client is not connected[0m
+[0;32mI (4768) Hallowcam: WEBSOCKET_EVENT_CONNECTED[0m
+[0;32mI (5178) Hallowcam: Sending hello 0000[0m
+[0;32mI (6178) Hallowcam: Sending hello 0001[0m
+[0;32mI (7178) Hallowcam: Sending hello 0002[0m
+[0;32mI (8178) Hallowcam: Sending hello 0003[0m
+[0;32mI (9178) Hallowcam: Sending hello 0004[0m
+[0;32mI (10178) Hallowcam: Sending hello 0005[0m
+[0;32mI (11178) Hallowcam: Sending hello 0006[0m
+[0;32mI (12178) Hallowcam: No data received for 10 seconds, signaling shutdown[0m
+[0;32mI (12178) Hallowcam: Sending hello 0007[0m
+[0;32mI (13178) Hallowcam: Sending hello 0008[0m
+[0;32mI (13208) Hallowcam: WEBSOCKET_EVENT_DATA[0m
+[0;32mI (13208) Hallowcam: Received opcode=10[0m
+[0;33mW (13208) Hallowcam: Received=[0m
+[0;33mW (13208) Hallowcam: Total payload length=0, data_len=0, current payload offset=0[0m
+
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d8927  PS      : 0x00060230  A0      : 0x8017046c  A1      : 0x3ffcab10  
+A2      : 0x3ffc8ba4  A3      : 0x3f40442c  A4      : 0x3ffb03d8  A5      : 0x00000000  
+A6      : 0x3f4042bc  A7      : 0x00000002  A8      : 0x800d8927  A9      : 0x3ffcaaf0  
+A10     : 0x00000000  A11     : 0x3f403d54  A12     : 0x3f403d04  A13     : 0x00003398  
+A14     : 0x3f4042bc  A15     : 0x00000000  SAR     : 0x00000014  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400d8924:0x3ffcab10 0x40170469:0x3ffcab40 0x4016fdd5:0x3ffcab70 0x400da173:0x3ffcabb0 0x400da2e1:0x3ffcac10 0x400da6cc:0x3ffcac40 0x40089b81:0x3ffcac80
+
+
+
+
+ELF file SHA256: c845921d8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fee4h (130788) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002ff0c vaddr=3ffb0000 size=0010ch (   268) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=a3fd8h (671704) map[0m
+[0;32mI (366) esp_image: segment 3: paddr=000d4000 vaddr=3ffb010c size=03e78h ( 15992) load[0m
+[0;32mI (372) esp_image: segment 4: paddr=000d7e80 vaddr=40080000 size=18948h (100680) load[0m
+[0;32mI (411) esp_image: segment 5: paddr=000f07d0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (424) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (424) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (443) app_init: Application information:[0m
+[0;32mI (443) app_init: Project name:     hallowcam[0m
+[0;32mI (447) app_init: App version:      1[0m
+[0;32mI (450) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (455) app_init: ELF file SHA256:  c845921d8...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB8810 len 000277F0 (157 KiB): DRAM[0m
+[0;32mI (492) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098948 len 000076B8 (29 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (528) main_task: Started on CPU0[0m
+[0;32mI (538) main_task: Calling app_main()[0m
+[0;32mI (538) Hallowcam: [APP] Startup..[0m
+[0;32mI (538) Hallowcam: [APP] Free memory: 274756 bytes[0m
+[0;32mI (538) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (538) Hallowcam: I2C bus initialized, addr=0x21[0m
+[0;32mI (548) CAM: I2S camera mode initialized[0m
+[0;32mI (748) Hallowcam: Setting up WIFI...[0m
+[0;32mI (778) wifi:wifi driver task: 3ffc18f4, prio:23, stack:6656, core=0[0m
+[0;32mI (788) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (788) wifi:wifi certification version: v7.0[0m
+[0;32mI (788) wifi:config NVS flash: enabled[0m
+[0;32mI (788) wifi:config nano formatting: disabled[0m
+[0;32mI (798) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (798) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (798) wifi:Init management short buffer num: 32[0m
+[0;32mI (808) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (808) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (818) wifi:Init static rx buffer num: 10[0m
+[0;32mI (818) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (828) wifi_init: rx ba win: 6[0m
+[0;32mI (828) wifi_init: accept mbox: 6[0m
+[0;32mI (828) wifi_init: tcpip mbox: 32[0m
+[0;32mI (828) wifi_init: udp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp mbox: 6[0m
+[0;32mI (838) wifi_init: tcp tx win: 5760[0m
+[0;32mI (838) wifi_init: tcp rx win: 5760[0m
+[0;32mI (848) wifi_init: tcp mss: 1440[0m
+[0;32mI (848) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (848) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (858) Hallowcam: configuring...[0m
+[0;33mW (858) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (868) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (958) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (988) wifi:mode : sta (6c:c8:40:89:59:a0)[0m
+[0;32mI (988) wifi:enable tsf[0m
+[0;32mI (988) Hallowcam: STA initialization complete[0m
+[0;32mI (988) Hallowcam: Connecting to AP...[0m
+[0;32mI (1008) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1008) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1048) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1068) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1088) wifi:connected with CoontazNew, aid = 10, channel 11, BW20, bssid = 24:41:fe:0f:17:e9[0m
+[0;32mI (1088) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (1088) wifi:pm start, type: 1[0m
+
+[0;32mI (1098) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1118) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (1128) wifi:<ba-add>idx:0 (ifx:0, 24:41:fe:0f:17:e9), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2168) wifi:<ba-add>idx:1 (ifx:0, 24:41:fe:0f:17:e9), tid:6, ssn:2, winSize:64[0m
+[0;32mI (2658) esp_netif_handlers: sta ip: 192.168.1.176, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2658) Hallowcam: STA IP: 192.168.1.176[0m
+[0;32mI (2658) Hallowcam: Connected to ap[0m
+[0;32mI (2658) Hallowcam: Setting up websocket...[0m
+[0;32mI (2658) Hallowcam: Connecting to ws://192.168.1.158:8080...[0m
+[0;33mW (2668) websocket_client: `reconnect_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;33mW (2678) websocket_client: `network_timeout_ms` is not set, or it is less than or equal to zero, using default time out 10000 (milliseconds)[0m
+[0;32mI (2698) websocket_client: Started[0m
+[1;31mE (2698) websocket_client: Websocket client is not connected[0m
+[0;32mI (3318) Hallowcam: WEBSOCKET_EVENT_CONNECTED[0m
+[0;32mI (3698) Hallowcam: Sending hello 0000[0m
+[0;32mI (4698) Hallowcam: Sending hello 0001[0m
+[0;32mI (5698) Hallowcam: Sending hello 0002[0m
+[0;32mI (6698) Hallowcam: Sending hello 0003[0m
+[0;32mI (7698) Hallowcam: Sending hello 0004[0m
+[0;32mI (8698) Hallowcam: Sending hello 0005[0m
+[0;32mI (9698) Hallowcam: Sending hello 0006[0m

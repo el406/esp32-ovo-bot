@@ -1,0 +1,43 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/spade/esp/hallowcam/build/bootloader/esp-idf/esptool_py && /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/spade/esp/hallowcam/build/bootloader/bootloader.bin
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/i2c_parallel/CMakeFiles/__idf_i2c_parallel.dir/i2s_parallel.c.obj
+In file included from /home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:7:
+/home/spade/esp/esp-idf/components/driver/deprecated/driver/periph_ctrl.h:7:2: warning: #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions. [-Wcpp]
+    7 | #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions.
+      |  ^~~~~~~
+In file included from /home/spade/esp/esp-idf/components/driver/deprecated/driver/i2s.h:23,
+                 from /home/spade/esp/hallowcam/components/i2c_parallel/include/i2s_parallel.h:7,
+                 from /home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:8:
+/home/spade/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+/home/spade/esp/esp-idf/components/driver/deprecated/driver/i2s.h:27:2: warning: #warning "This set of I2S APIs has been deprecated, please include 'driver/i2s_std.h', 'driver/i2s_pdm.h' or 'driver/i2s_tdm.h' instead. if you want to keep using the old APIs and ignore this warning, you can enable 'Suppress legacy driver deprecated warning' option under 'I2S Configuration' menu in Kconfig" [-Wcpp]
+   27 | #warning "This set of I2S APIs has been deprecated, \
+      |  ^~~~~~~
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:14:44: warning: excess elements in array initializer
+   14 | static i2s_dev_t *I2S[I2S_NUM_1] = {&I2S0, &I2S1};
+      |                                            ^
+/home/spade/esp/hallowcam/components/i2c_parallel/i2s_parallel.c:14:44: note: (near initialization for 'I2S')
+/home/spade/esp/hallowcam/components/i2c_parallel/include/i2s_parallel.h: In function 'i2s_parallel_get_memory_width':
+/home/spade/esp/hallowcam/components/i2c_parallel/include/i2s_parallel.h:39:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   39 |       if(port == I2S_NUM_1) {
+      |         ^
+/home/spade/esp/hallowcam/components/i2c_parallel/include/i2s_parallel.h:42:5: note: here
+   42 |     case I2S_PARALLEL_WIDTH_16:
+      |     ^~~~
+[5/10] Linking C static library esp-idf/i2c_parallel/libi2c_parallel.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Building C object CMakeFiles/hallowcam.elf.dir/project_elf_src_esp32.c.obj
+[8/10] Linking CXX executable hallowcam.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/spade/esp/hallowcam/build/hallowcam.bin
+[10/10] cd /home/spade/esp/hallowcam/build/esp-idf/esptool_py && /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/spade/esp/hallowcam/build/partition_table/partition-table.bin /home/spade/esp/hallowcam/build/hallowcam.bin
+hallowcam.bin binary size 0x7dc60 bytes. Smallest app partition is 0x100000 bytes. 0x823a0 bytes (51%) free.

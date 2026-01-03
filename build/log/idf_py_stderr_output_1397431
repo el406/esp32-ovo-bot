@@ -1,0 +1,50 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e5666: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e5a28: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082fc9: [0;33m_xt_lowint1[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x401270d6: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32m/home/spade/esp/esp-idf/components/hal/esp32/include/hal/i2c_ll.h[0m[0m:[1;31m463[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x4012728c: [0;33ms_i2c_transaction_start[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x4012737a: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x401281eb: [0;33mi2c_master_transmit_receive[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1248[0m
+[0m--- 0x400e2c79: [0;33mSCCB_Read[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/sccb-ng.c[0m[0m:[1;31m232[0m
+[0m--- 0x400df942: [0;33mgc032a_detect[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/sensors/gc032a.c[0m[0m:[1;31m334[0m
+[0m--- 0x400d8570: [0;33mcamera_probe[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m251[0m
+[0m--- 0x400d86b6: [0;33mesp_camera_init[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m310[0m
+[0m--- 0x400d837d: [0;33mapp_main[0m[0m at [0;32m/home/spade/esp/hallowcam/main/hallowcam.c[0m[0m:[1;31m357[0m
+[0m--- 0x4012a7d8: [0;33mmain_task[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40089a85: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400e5666: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e5a28: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082fc9: [0;33m_xt_lowint1[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x401270d3: [0;33mi2c_ll_is_bus_busy[0m[0m at [0;32m/home/spade/esp/esp-idf/components/hal/esp32/include/hal/i2c_ll.h[0m[0m:[1;31m463[0m
+[0m--- (inlined by) [0;33ms_i2c_send_commands[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m543[0m
+[0m--- 0x4012728c: [0;33ms_i2c_transaction_start[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x4012737a: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x401281eb: [0;33mi2c_master_transmit_receive[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1248[0m
+[0m--- 0x400e2c79: [0;33mSCCB_Read[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/sccb-ng.c[0m[0m:[1;31m232[0m
+[0m--- 0x400df942: [0;33mgc032a_detect[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/sensors/gc032a.c[0m[0m:[1;31m334[0m
+[0m--- 0x400d8570: [0;33mcamera_probe[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m251[0m
+[0m--- 0x400d86b6: [0;33mesp_camera_init[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m310[0m
+[0m--- 0x400d837d: [0;33mapp_main[0m[0m at [0;32m/home/spade/esp/hallowcam/main/hallowcam.c[0m[0m:[1;31m357[0m
+[0m--- 0x4012a7d8: [0;33mmain_task[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40089a85: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x400e5666: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e5a28: [0;33mtask_wdt_isr[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x40082fc9: [0;33m_xt_lowint1[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x401270cd: [0;33ms_i2c_send_commands[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m539[0m
+[0m--- 0x4012728c: [0;33ms_i2c_transaction_start[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m649[0m
+[0m--- 0x4012737a: [0;33ms_i2c_synchronous_transaction[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m945[0m
+[0m--- 0x401281eb: [0;33mi2c_master_transmit_receive[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_driver_i2c/i2c_master.c[0m[0m:[1;31m1248[0m
+[0m--- 0x400e2c79: [0;33mSCCB_Read[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/sccb-ng.c[0m[0m:[1;31m232[0m
+[0m--- 0x400df942: [0;33mgc032a_detect[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/sensors/gc032a.c[0m[0m:[1;31m334[0m
+[0m--- 0x400d8570: [0;33mcamera_probe[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m251[0m
+[0m--- 0x400d86b6: [0;33mesp_camera_init[0m[0m at [0;32m/home/spade/esp/hallowcam/managed_components/espressif__esp32-camera/driver/esp_camera.c[0m[0m:[1;31m310[0m
+[0m--- 0x400d837d: [0;33mapp_main[0m[0m at [0;32m/home/spade/esp/hallowcam/main/hallowcam.c[0m[0m:[1;31m357[0m
+[0m--- 0x4012a7d8: [0;33mmain_task[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/app_startup.c[0m[0m:[1;31m208[0m
+[0m--- 0x40089a85: [0;33mvPortTaskWrapper[0m[0m at [0;32m/home/spade/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

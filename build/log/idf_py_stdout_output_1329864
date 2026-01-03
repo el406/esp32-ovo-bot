@@ -1,0 +1,444 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (275) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (305) app_init: Project name:     hallowcam[0m
+[0;32mI (309) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (359) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (304) app_init: Project name:     hallowcam[0m
+[0;32mI (308) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (358) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (304) app_init: Project name:     hallowcam[0m
+[0;32mI (308) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (358) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (304) app_init: Project name:     hallowcam[0m
+[0;32mI (308) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (358) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (304) app_init: Project name:     hallowcam[0m
+[0;32mI (308) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (358) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b5a4h (374180) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b5cc vaddr=40082748 size=11d84h ( 73092) load[0m
+[0;32mI (274) esp_image: segment 5: paddr=0009d358 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) app_init: Application information:[0m
+[0;32mI (304) app_init: Project name:     hallowcam[0m
+[0;32mI (308) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  bb8e15582...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (358) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (364) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (389) main_task: Started on CPU0[0m
+[0;32mI (399) main_task: Calling app_main()[0m
+[0;32mI (399) Hallowcam: [APP] Startup..[0m
+[0;32mI (399) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (399) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (399) cam_hal: cam init ok[0m
+[0;32mI (409) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (409) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (419) camera: Detected camera at address=0x00[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x00000000  PS      : 0x00060530  A0      : 0x800d865d  A1      : 0x3ffbbff0  
+A2      : 0x3ffbc090  A3      : 0x00000000  A4      : 0x00000068  A5      : 0x3ffb61d4  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x800d85d4  A9      : 0x3ffbbfd0  
+A10     : 0x3ffbd7e4  A11     : 0x3f403d6c  A12     : 0x3f403e20  A13     : 0x000001a3  
+A14     : 0x3f403d6c  A15     : 0x00000000  SAR     : 0x00000004  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffe  
+
+
+Backtrace: 0xfffffffd:0x3ffbbff0 0x400d865a:0x3ffbc050 0x400d832d:0x3ffbc090 0x4012a77c:0x3ffbc180 0x40089a85:0x3ffbc1b0
+
+
+
+
+ELF file SHA256: bb8e15582
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e24h ( 97828) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00027e4c vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d8d0 vaddr=40080000 size=02748h ( 10056) load[0m

@@ -1,0 +1,84 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x40088c75: [0;33mpanic_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/panic.c[0m[0m:[1;31m469[0m
+[0m--- 0x40088c3d: [0;33mesp_system_abort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x400907c1: [0;33mabort[0m[0m at [0;32m/home/spade/esp/esp-idf/components/newlib/src/abort.c[0m[0m:[1;31m38[0m
+[0m--- 0x400e0d54: [0;33mcheck_i2c_driver_conflict[0m[0m at [0;32m/home/spade/esp/esp-idf/components/driver/i2c/i2c.c[0m[0m:[1;31m1738[0m
+[0m--- 0x400d2867: [0;33mdo_global_ctors[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m104[0m
+[0m--- 0x400d294e: [0;33mstart_cpu0_default[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/startup.c[0m[0m:[1;31m207[0m
+[0m--- 0x400814dd: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m935[0m
+[0m--- 0x40079796: [0;33mset_cache_and_start_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m1156[0m
+[0m--- (inlined by) [0;33munpack_load_app[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m891[0m
+[0m--- (inlined by) [0;33mload_image[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader_support/src/bootloader_utility.c[0m[0m:[1;31m801[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/spade/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080638: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/spade/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m

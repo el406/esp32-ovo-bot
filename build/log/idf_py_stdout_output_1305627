@@ -1,0 +1,767 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (225) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (262) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (278) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (283) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (295) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (299) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (325) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0007b92c vaddr=40089598 size=0a5d4h ( 42452) load[0m
+[0;32mI (241) esp_image: segment 5: paddr=00085f08 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (251) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) boot: Disabling RNG early entropy source...[0m
+[0;32mI (261) cpu_start: Multicore app[0m
+[0;32mI (270) cpu_start: Pro cpu start user code[0m
+[0;32mI (270) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (270) app_init: Application information:[0m
+[0;32mI (270) app_init: Project name:     hallowcam[0m
+[0;32mI (274) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (282) app_init: ELF file SHA256:  c2e0857bb...[0m
+[0;32mI (287) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (294) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (298) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFB7188 len 00028E78 (163 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40093B6C len 0000C494 (49 KiB): IRAM[0m
+[0;32mI (337) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: dio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+[0;32mI (365) Hallowcam: [APP] Startup..[0m
+[0;32mI (365) Hallowcam: [APP] Free memory: 280524 bytes[0m
+[0;32mI (365) Hallowcam: [APP] IDF version: v5.5.1[0m
+[1;31mE (365) ledc: ledc_timer_config(786): timer_num argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[1;31mE (375) ledc: ledc_channel_config(845): timer_select argument is invalid[0m
+[0;32mI (395) Hallowcam: Setting up WIFI...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3001 (ESP_ERR_WIFI_NOT_INIT) at 0x400d75dd
+file: "./main/hallowcam.c" line 182
+func: setup_wifi
+expression: esp_wifi_set_config(WIFI_IF_STA, &conf)
+
+abort() was called at PC 0x4008855f on core 0
+
+
+Backtrace: 0x40088605:0x3ffb9220 0x400885cd:0x3ffb9240 0x4009003d:0x3ffb9260 0x4008855f:0x3ffb92d0 0x400d75dd:0x3ffb9300 0x400d775a:0x3ffb93e0 0x400d786d:0x3ffb9400 0x4011ad20:0x3ffb9480 0x40089145:0x3ffb94b0
+
+
+
+
+ELF file SHA256: c2e0857bb
+
+Rebooting...
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (13) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (23) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (31) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (40) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (53) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (63) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1344ch ( 78924) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=00023474 vaddr=3ffb0000 size=03604h ( 13828) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00026a80 vaddr=40080000 size=09598h ( 38296) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=4b904h (309508) map[0m

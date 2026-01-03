@@ -1,0 +1,89 @@
+Command: /home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/spade/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/spade/esp/hallowcam/build/hallowcam.elf /home/spade/esp/hallowcam/build/bootloader/bootloader.elf -m '/home/spade/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/spade/esp/esp-idf/tools/idf.py'
+[0;32mI (13) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Oct 28 2025 21:07:37[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (14) boot: chip revision: v3.1[0m
+[0;32mI (16) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (20) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (24) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (27) boot: Enabling RNG early entropy source...[0m
+[0;32mI (32) boot: Partition Table:[0m
+[0;32mI (34) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (41) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (47) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (54) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (60) boot: End of partition table[0m
+[0;32mI (64) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17ea4h ( 97956) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=00027ecc vaddr=3ffb0000 size=05a7ch ( 23164) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002d950 vaddr=40080000 size=026c8h (  9928) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=5b638h (374328) map[0m
+[0;32mI (246) esp_image: segment 4: paddr=0008b660 vaddr=400826c8 size=11e04h ( 73220) load[0m
+[0;32mI (275) esp_image: segment 5: paddr=0009d46c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (286) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (286) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (305) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (305) app_init: Application information:[0m
+[0;32mI (305) app_init: Project name:     hallowcam[0m
+[0;32mI (309) app_init: App version:      1[0m
+[0;32mI (312) app_init: Compile time:     Oct 29 2025 09:52:37[0m
+[0;32mI (317) app_init: ELF file SHA256:  7cc77419a...[0m
+[0;32mI (321) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (325) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (329) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (333) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (343) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFB9E88 len 00026178 (152 KiB): DRAM[0m
+[0;32mI (354) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (359) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (365) heap_init: At 400944CC len 0000BB34 (46 KiB): IRAM[0m
+[0;32mI (371) spi_flash: detected chip: generic[0m
+[0;32mI (373) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (390) main_task: Started on CPU0[0m
+[0;32mI (400) main_task: Calling app_main()[0m
+[0;32mI (400) Hallowcam: [APP] Startup..[0m
+[0;32mI (400) Hallowcam: [APP] Free memory: 269004 bytes[0m
+[0;32mI (400) Hallowcam: [APP] IDF version: v5.5.1[0m
+[0;32mI (400) cam_hal: cam init ok[0m
+[0;32mI (410) sccb-ng: pin_sda 21 pin_scl 22[0m
+[0;32mI (410) sccb-ng: sccb_i2c_port=1[0m
+[1;31mE (420) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (420) i2c.master: I2C transaction timeout detected[0m
+[1;31mE (420) i2c.master: s_i2c_synchronous_transaction(945): I2C transaction failed[0m
+[1;31mE (430) i2c.master: i2c_master_transmit_receive(1248): I2C transaction failed[0m
+[1;31mE (430) sccb-ng: SCCB_Read Failed addr:0x21, reg:0x0a, data:0x01, ret:259[0m
+[0;32mI (440) ov7725: Mismatch PID=0x1[0m
+[1;31mE (440) i2c.master: I2C hardware NACK detected[0m
+[1;31mE (5440) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (5440) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (5440) task_wdt: Tasks currently running:[0m
+[1;31mE (5440) task_wdt: CPU 0: main[0m
+[1;31mE (5440) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (5440) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400E569E:0x3FFB1B20 0x400E5A60:0x3FFB1B40 0x40082FC9:0x3FFB1B70 0x40127103:0x3FFBBD50 0x401272C4:0x3FFBBD80 0x401273B2:0x3FFBBDB0 0x4012800A:0x3FFBBDE0 0x401280E6:0x3FFBBF10 0x400E2CFD:0x3FFBBF50 0x400DD8F6:0x3FFBBF90 0x400D85A8:0x3FFBBFB0 0x400D86EE:0x3FFBC010 0x400D83BD:0x3FFBC050 0x4012A810:0x3FFBC180 0x40089A85:0x3FFBC1B0
+
+[1;31mE (10440) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (10440) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (10440) task_wdt: Tasks currently running:[0m
+[1;31mE (10440) task_wdt: CPU 0: main[0m
+[1;31mE (10440) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (10440) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400E569E:0x3FFB1B20 0x400E5A60:0x3FFB1B40 0x40082FC9:0x3FFB1B70 0x4012710B:0x3FFBBD50 0x401272C4:0x3FFBBD80 0x401273B2:0x3FFBBDB0 0x4012800A:0x3FFBBDE0 0x401280E6:0x3FFBBF10 0x400E2CFD:0x3FFBBF50 0x400DD8F6:0x3FFBBF90 0x400D85A8:0x3FFBBFB0 0x400D86EE:0x3FFBC010 0x400D83BD:0x3FFBC050 0x4012A810:0x3FFBC180 0x40089A85:0x3FFBC1B0
+
+[1;31mE (15440) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (15440) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (15440) task_wdt: Tasks currently running:[0m
+[1;31mE (15440) task_wdt: CPU 0: main[0m
+[1;31mE (15440) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (15440) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400E569E:0x3FFB1B20 0x400E5A60:0x3FFB1B40 0x40082FC9:0x3FFB1B70 0x4012710B:0x3FFBBD50 0x401272C4:0x3FFBBD80 0x401273B2:0x3FFBBDB0 0x4012800A:0x3FFBBDE0 0x401280E6:0x3FFBBF10 0x400E2CFD:0x3FFBBF50 0x400DD8F6:0x3FFBBF90 0x400D85A8:0x3FFBBFB0 0x400D86EE:0x3FFBC010 0x400D83BD:0x3FFBC050 0x4012A810:0x3FFBC180 0x40089A85:0x3FFBC1B0
+
